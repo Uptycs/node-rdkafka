@@ -92,7 +92,8 @@ module.exports = {
           {
             id: 1,
             host: 'localhost',
-            port: 40
+            port: 40,
+            rack: 'rack'
           }
         ],
         topics: [

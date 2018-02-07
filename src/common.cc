@@ -306,6 +306,8 @@ v8::Local<v8::Object> ToV8Object(RdKafka::Metadata* metadata) {
       Nan::New<v8::String>(x->host().c_str()).ToLocalChecked());
     Nan::Set(current_broker, Nan::New("port").ToLocalChecked(),
       Nan::New<v8::Number>(x->port()));
+    Nan::Set(current_broker, Nan::New("rack").ToLocalChecked(),
+      Nan::New<v8::String>(x->rack().c_str()).ToLocalChecked());
 
     broker_data->Set(broker_i, current_broker);
   }
